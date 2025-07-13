@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: medical-billing-backend
+    env: java
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/medical-billing-backend-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12789690
+      - key: SPRING_DATASOURCE_USERNAME
+        value: sql12789690
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: XaG6t4MuQr
