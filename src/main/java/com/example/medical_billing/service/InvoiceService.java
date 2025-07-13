@@ -83,7 +83,6 @@ public class InvoiceService {
                         table.addCell(String.valueOf(index++));
                         table.addCell(item.getProductName());
                         table.addCell(item.getBatchNo());
-                        table.addCell("N/A"); // Add expiry if available in future
                         table.addCell(String.format("%.2f", item.getPrice()));
                         table.addCell(String.valueOf(item.getQuantity()));
                         table.addCell(String.format("%.2f", item.getTotal()));
