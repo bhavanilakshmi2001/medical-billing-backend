@@ -1,5 +1,5 @@
 # ----------- Stage 1: Build the app -------------
-FROM maven:3.9.4-eclipse-termurin-17 AS build
+FROM maven:3.9.4-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY . .
 RUN ./mvnw clean package -DskipTests
