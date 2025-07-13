@@ -114,10 +114,23 @@
         </repository>
     </repositories>
 
-  
-
-<build>
+  <build>
     <plugins>
+        <!-- ✅ Spring Boot plugin for creating runnable JAR -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>3.2.5</version> <!-- Use your Spring Boot version -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+
+        <!-- ✅ Compiler plugin just for compiling code -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -127,13 +140,6 @@
                 <target>17</target>
                 <release>17</release>
             </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>repackage</goal>
-                    </goals>
-                </execution>
-            </executions>
         </plugin>
     </plugins>
 </build>
