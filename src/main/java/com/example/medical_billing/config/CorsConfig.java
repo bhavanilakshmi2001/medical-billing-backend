@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Apply to all endpoints
-                        .allowedOrigins("http://127.0.0.1:5500") // Allow all origins (for dev)
+                        .allowedOrigins("https://medical-billing-system.netlify.app") // Allow all origins (for dev)
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // All HTTP methods
                         .allowedHeaders("*");
             }
